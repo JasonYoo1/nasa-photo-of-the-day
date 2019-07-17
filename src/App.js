@@ -27,7 +27,7 @@ function App() {
         setVersion (results.service_version);
         setTitle (results.title);
         setUrl (results.url);})
-      })
+      },[])
       return (
         <div className="App">
           <Header/>
@@ -35,7 +35,7 @@ function App() {
             Read through the instructions in the README.md file to build your NASA
             app! Have fun 🚀!
           </p>
-          <p>{title}</p>
+          <h1>{title}</h1>
           <p>{date}</p>
           <p>{explanation}</p>
           <p>{version}</p>
