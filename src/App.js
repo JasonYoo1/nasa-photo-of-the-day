@@ -1,9 +1,8 @@
 import React,{ useState, useEffect } from "react";
 import "./App.css";
-import axios from 'axios';
 import Header from './Header'
-// import Images from './Display'
-
+import Display from './Display'
+import axios from 'axios';
 
 function App() {
 
@@ -36,10 +35,11 @@ function App() {
             app! Have fun 🚀!
           </p>
           <h1>{title}</h1>
+          {media === 'video' ? <iframe src = {url}></iframe> : <img src ={url}></img>}
           <p>{date}</p>
           <p>{explanation}</p>
           <p>{version}</p>
-          <a href={url}>Click Me</a>
+          <Display title ={title} url='this is not url'/>
         </div>)
 }
 
