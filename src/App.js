@@ -3,6 +3,7 @@ import "./App.css";
 import Header from './Header'
 import Display from './Display'
 import axios from 'axios';
+import {Var} from './Style'
 
 function App() {
 
@@ -29,17 +30,12 @@ function App() {
       },[])
       return (
         <div className="App">
-          <Header/>
-          <p>
-            Read through the instructions in the README.md file to build your NASA
-            app! Have fun 🚀!
-          </p>
+          <Var><p>Hello</p></Var>
           <h1>{title}</h1>
           {media === 'video' ? <iframe src = {url}></iframe> : <img src ={url}></img>}
           <p>{date}</p>
           <p>{explanation}</p>
-          <p>{version}</p>
-          <Display title ={title} url='this is not url'/>
+          {/* <p>{version}</p> */}
         </div>)
 }
 
