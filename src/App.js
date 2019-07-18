@@ -1,9 +1,8 @@
 import React,{ useState, useEffect } from "react";
 import "./App.css";
-import Header from './Header'
 import Display from './Display'
 import axios from 'axios';
-import {Var} from './Style'
+import {Header} from './Style'
 
 function App() {
 
@@ -30,7 +29,7 @@ function App() {
       },[])
       return (
         <div className="App">
-          <Var><p>Hello</p></Var>
+          <Header><p>{title}</p></Header>
           <h1>{title}</h1>
           {media === 'video' ? <iframe src = {url}></iframe> : <img src ={url}></img>}
           <p>{date}</p>
